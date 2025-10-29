@@ -27,7 +27,7 @@ This repository contains accompanying resources, exercises, datasets, and sample
 * ~~pyflux 0.4.15~~ (Replaced with custom ARIMA implementation using scikit-learn)
 * imbalanced-learn 0.14.0
 * ~~spark-sklearn 0.2.3~~ (Available but may have compatibility issues)
-* lime (latest)
+* lime 0.2.0.1 (For model explainability and interpretable AI)
 * scipy 1.16.3 (Added for enhanced mathematical operations)
 
 ### Compatibility Notes
@@ -74,6 +74,48 @@ This repository contains accompanying resources, exercises, datasets, and sample
   - Comprehensive visualization and metrics
 - **Benefits**: No TensorFlow dependency, faster execution, same educational value
 
+### Chapter 1: Spam Fighting Notebooks (Ling-Spam Dataset Conversion)
+✅ **All spam fighting notebooks updated to use Ling-Spam CSV dataset**
+
+#### `spam-fighting-naivebayes.ipynb`
+- **Dataset Migration**: Converted from TREC corpus to accessible Ling-Spam CSV format
+- **Modern Implementation**: Updated for Python 3.14+ with scikit-learn 1.7.2
+- **Features**: Multinomial Naive Bayes with comprehensive performance metrics
+- **Educational Focus**: Probabilistic spam classification with feature importance analysis
+
+#### `spam-fighting-blacklist.ipynb`
+- **Approach**: Rule-based spam detection using blacklist words
+- **Implementation**: Efficient blacklist creation and matching algorithms
+- **Performance**: Fast classification with interpretable decision logic
+- **Use Cases**: Baseline comparison and explainable spam filtering
+
+#### `spam-fighting-lsh.ipynb`
+- **Technology**: Locality Sensitive Hashing (LSH) with MinHash for similarity detection
+- **Dataset**: Ling-Spam format with datasketch 1.6.5 library
+- **Innovation**: Similarity-based spam detection using hash fingerprints
+- **Applications**: Scalable near-duplicate spam detection
+
+### Chapter 7: LIME Explainability for Spam Classification (`lime-explainability-spam-fighting.ipynb`)
+✅ **Fully Updated for Python 3.14+ and Ling-Spam Dataset**
+- **LIME Integration**: Successfully implemented LIME (Local Interpretable Model-agnostic Explanations) for spam classification explainability
+- **Updated Dataset**: Converted from TREC 2007 corpus to Ling-Spam CSV dataset format for better accessibility
+- **Model Explainability Features**:
+  - Random Forest and Naive Bayes classifiers with LIME explanations
+  - Feature importance analysis showing which words contribute to spam/ham classification
+  - Interactive explanation functions for real-time email analysis
+  - Side-by-side model comparison with LIME insights
+  - Comprehensive visualizations and HTML outputs
+- **Educational Value**: 
+  - Understanding why models make specific predictions
+  - Identifying spam indicators (FREE, URGENT, !!!, dollar amounts)
+  - Professional language patterns for legitimate emails
+  - Security applications for email filtering and phishing detection
+- **Technical Improvements**:
+  - Robust error handling with graceful fallbacks
+  - Automatic directory creation for datasets and figures
+  - Sample dataset generation when Ling-Spam CSV is unavailable
+  - Modern text preprocessing with NLTK tokenization and stemming
+
 ### General Notebook Updates
 - **Pandas Compatibility**: Fixed deprecated `infer_datetime_format` warnings
 - **Import Statements**: Updated to use modern package versions
@@ -90,6 +132,30 @@ cd ml-sec
 # Install dependencies (modern versions)
 pip install jupyter pandas matplotlib seaborn numpy scikit-learn nltk datasketch imbalanced-learn lime scipy
 
+# Alternative: Install from requirements file
+pip install -r requirements.txt
+
 # Start Jupyter
 jupyter notebook
 ```
+
+## Key Features and Educational Value
+
+### 🔍 **Explainable AI with LIME**
+- **Chapter 7**: Complete LIME implementation for spam classification
+- **Interactive Explanations**: Understand why models classify emails as spam/ham
+- **Feature Attribution**: See which words contribute most to each prediction
+- **Model Comparison**: Compare Random Forest vs Naive Bayes decision processes
+- **Security Applications**: Email filtering, phishing detection, content moderation
+
+### 📧 **Comprehensive Spam Detection**
+- **Chapter 1**: Multiple approaches - Naive Bayes, blacklist, LSH similarity
+- **Modern Dataset**: Ling-Spam CSV format for easy access and experimentation
+- **Performance Analysis**: Detailed metrics and visualization
+- **Real-world Applications**: Production-ready spam filtering techniques
+
+### 📈 **Time Series Security Analytics**
+- **Chapter 3**: Anomaly detection with modern MLPRegressor (replaces LSTM)
+- **Custom ARIMA**: Forecasting implementation using scikit-learn
+- **Fast Training**: Efficient alternatives to deep learning approaches
+- **Practical Applications**: Network intrusion detection, system monitoring

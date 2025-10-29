@@ -1,6 +1,6 @@
 # Updated requirements for Python 3.14+ compatibility
 # Original versions commented out, modern versions listed
-# Key changes: PyFlux → custom ARIMA, TensorFlow/Keras → scikit-learn MLPRegressor
+# Key changes: PyFlux → custom ARIMA, TensorFlow/Keras → scikit-learn MLPRegressor, LIME added
 
 jupyter>=1.1.1
 pandas>=2.3.3
@@ -9,13 +9,13 @@ seaborn>=0.13.2
 numpy>=2.3.4
 scikit-learn>=1.7.2
 nltk>=3.9.2
-datasketch>=1.6.5
+datasketch>=1.6.5  # For LSH-based spam detection (Chapter 1)
 # tensorflow>=2.0.0  # Not compatible with Python 3.14+ - replaced with scikit-learn MLPRegressor
 # keras>=3.12.0  # Not compatible with Python 3.14+ - replaced with scikit-learn MLPRegressor
 # pyflux==0.4.15  # Incompatible with Python 3.14+ - replaced with custom implementation
 imbalanced-learn>=0.14.0
 # spark-sklearn==0.2.3  # May have compatibility issues
-lime>=0.1.1.21
+lime>=0.2.0.1  # For LIME (Local Interpretable Model-agnostic Explanations) - Chapter 7
 scipy>=1.16.3
 
 # Legacy versions (for reference):
@@ -32,4 +32,4 @@ scipy>=1.16.3
 # pyflux==0.4.15
 # imbalanced-learn==0.3.1
 # spark-sklearn==0.2.3
-# lime==0.1.1.21
+# lime==0.1.1.21  # Original version - updated to 0.2.0.1 for Python 3.14+ compatibility
