@@ -1,5 +1,6 @@
 # Updated requirements for Python 3.14+ compatibility
 # Original versions commented out, modern versions listed
+# Key changes: PyFlux → custom ARIMA, TensorFlow/Keras → scikit-learn MLPRegressor
 
 jupyter>=1.1.1
 pandas>=2.3.3
@@ -9,8 +10,8 @@ numpy>=2.3.4
 scikit-learn>=1.7.2
 nltk>=3.9.2
 datasketch>=1.6.5
-tensorflow>=2.0.0
-keras>=3.12.0
+# tensorflow>=2.0.0  # Not compatible with Python 3.14+ - replaced with scikit-learn MLPRegressor
+# keras>=3.12.0  # Not compatible with Python 3.14+ - replaced with scikit-learn MLPRegressor
 # pyflux==0.4.15  # Incompatible with Python 3.14+ - replaced with custom implementation
 imbalanced-learn>=0.14.0
 # spark-sklearn==0.2.3  # May have compatibility issues
